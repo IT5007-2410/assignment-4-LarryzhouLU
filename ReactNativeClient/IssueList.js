@@ -341,7 +341,7 @@ export default class IssueList extends React.Component {
           </View>
         </View>
 
-        <ScrollView style={styles.content}>
+        <View style={styles.content}>
           {this.state.selector === 1 && <IssueFilter />}
           {this.state.selector === 2 && (
             <IssueTable issues={this.state.issues} />
@@ -352,7 +352,7 @@ export default class IssueList extends React.Component {
           {this.state.selector === 4 && (
             <BlackList addToBlacklist={this.addToBlacklist} />
           )}
-        </ScrollView>
+        </View>
       </SafeAreaView>
     );
   }
